@@ -55,7 +55,11 @@ app.layout = html.Div([
             className="dropdown"),
         ], className='menu'),
         html.Div([
-            html.Div([]),
+            html.Div(['a'], style={
+                    'background-image': 'url("/assets/img/fcgui_logo.png")',
+                    'background-repeat': 'no-repeat',
+                    'margin-top': '5px',
+                    'min-height': '90px'}),
             html.Div([
                 html.H4('IP PLC:', style={'padding': '5px 0px 0px 0px'}),
                 dcc.Input(className='input', id='ip-plc',type='text',placeholder='',style={'padding': '0px 0px 0px 0px', 'background-color': 'green', 'width': '50%'}, value='{}'.format('MODO DEMO'), readOnly=True),],
@@ -65,10 +69,7 @@ app.layout = html.Div([
                     'display': 'grid',
                     'grid-template-columns': '1fr 1fr',
             })
-        ], className='hbottom', style={
-                    'background-image': 'url("/assets/img/fcgui_logo.png")',
-                    'background-repeat': 'no-repeat',
-                    'margin-top': '5px',}),
+        ], className='hbottom', ),
     ]),
    
     html.Div([

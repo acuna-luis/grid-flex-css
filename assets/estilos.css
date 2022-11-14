@@ -273,7 +273,7 @@ h5{
 }
 
 @media screen and (max-width: 900px) {
-	header .bottom{
+	.hbottom{
 		grid-template-columns: 1fr;
 	}
 	.container {
