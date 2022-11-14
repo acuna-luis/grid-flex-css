@@ -93,6 +93,7 @@ h5{
 	display: grid;
 	grid-template-columns: 1fr;
 	gap: 0px;
+	padding: 0px 30px 0px 0px;
 }
 .container .top .right .row1{
 	display: grid;
