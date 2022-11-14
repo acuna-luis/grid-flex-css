@@ -125,6 +125,7 @@ app.layout = html.Div([
                         ], style={'display': 'grid', 'grid-template-columns': '1fr 1fr'}),
                     ], className='container top right row3'
                     ), 
+                    html.Hr(),
                     html.Div([
                         html.H4('CAUSAS:',style={'margin-right':20}),
                         dcc.Dropdown(['', 'CAUSA 1', 'CAUSA 2', 'CAUSA 3'], '', style={'textAlign': 'center'}, id='causa-dropdown'),
