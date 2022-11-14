@@ -112,14 +112,18 @@ app.layout = html.Div([
                     ),    
                     html.Div([
                         html.H4('PARADA:',style={'margin-right':20}),
-                        dcc.Dropdown(['', '1', '2', '3'], '',style={'width':'50px','textAlign': 'center'}, id='parada-dropdown'),
-                        dcc.Input(id='parada',type='text',placeholder='', value='{}'.format(''), readOnly=True),
+                        html.Div([
+                            dcc.Dropdown(['', '1', '2', '3'], '',style={'width':'50px','textAlign': 'center'}, id='parada-dropdown'),
+                            dcc.Input(className='input', id='parada',type='text',placeholder='', value='{}'.format(''), readOnly=True, style={'background-color': 'white'})
+                        ], style={'display': 'grid', 'grid-template-columns': '1fr 5fr'})
                     ], className='container top right row2'
                     ), 
                     html.Div([
                         html.H4('INICIO/TOTAL:',style={'margin-right':20}),
-                        dcc.Input(id='inicio',type='text',placeholder='', value='{}'.format(''), readOnly=True),
-                        dcc.Input(id='total',type='text',placeholder='', value='{}'.format(''), readOnly=True),
+                        html.Div([
+                            dcc.Input(className='input', id='inicio',type='text',placeholder='', value='{}'.format(''), readOnly=True, style={'background-color': 'white'}),
+                            dcc.Input(className='input', id='total',type='text',placeholder='', value='{}'.format(''), readOnly=True, style={'background-color': 'white'}),
+                        ], style={'display': 'grid', 'grid-template-columns': '1fr 1fr'}),
                     ], className='container top right row3'
                     ), 
                     html.Div([
@@ -128,7 +132,7 @@ app.layout = html.Div([
                     ], className='container top right row4'
                     ), 
                     html.Div([
-                        html.Button('Modificar', id='modificar', n_clicks=0, style={'background-color': '#2d5f7c', 'color': 'white'}),
+                        html.Button('MODIFICAR', id='modificar', n_clicks=0, style={'align': 'right', 'background-color': '#2d5f7c', 'color': 'white', 'width': '150px', 'padding': '1% 0px 1% 0px'}),
                     ], className='container top right row5'
                     )],
                 className='container top right'), 
