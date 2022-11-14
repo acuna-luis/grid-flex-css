@@ -54,12 +54,21 @@ app.layout = html.Div([
                 ], 
             className="dropdown"),
         ], className='menu'),
-        html.Div([],
-        style={'background-image': 'url("/assets/img/fcgui_logo.png")',
-            'background-repeat': 'no-repeat',
-            'margin-top': '5px',
-        }
-        )
+        html.Div([
+            html.Div([]),
+            html.Div([
+                html.H4('IP PLC:', style={'padding': '5px 0px 0px 0px'}),
+                dcc.Input(className='input', id='ip-plc',type='text',placeholder='',style={'padding': '0px 0px 0px 0px', 'background-color': 'green', 'width': '50%'}, value='{}'.format('MODO DEMO'), readOnly=True),],
+            style={ 'height': '50%', 
+                    'align': 'right',
+                    'text-align': 'right',
+                    'display': 'grid',
+                    'grid-template-columns': '1fr 1fr',
+            })
+        ], className='hbottom', style={
+                    'background-image': 'url("/assets/img/fcgui_logo.png")',
+                    'background-repeat': 'no-repeat',
+                    'margin-top': '5px',}),
     ]),
    
     html.Div([
@@ -70,10 +79,6 @@ app.layout = html.Div([
                     html.Div(html.H3('', 
                     className='container top left left')),
                     html.Div([
-                        html.H4('IP PLC:'),
-                        dcc.Input(className='input', id='ip-plc',type='text',placeholder='',style={'display':'inline-block', 'background-color': 'green'}, value='{}'.format('MODO DEMO'), readOnly=True),
-                        html.H4('TURNO:'),
-                        dcc.Input(className='input', id='turno',type='text',placeholder='', value='{}'.format('MODO DEMO'), readOnly=True),
                         html.H4('PRODUCTO:'),
                         dcc.Input(className='input', id='producto',type='text',placeholder='', value='{}'.format('MODO DEMO'), readOnly=True),
                         html.H4('T. ESTÁNDAR:'),
@@ -157,8 +162,11 @@ app.layout = html.Div([
                     dcc.Input(className='input', id='nombre',type='text',placeholder='',style={'display':'inline-block'}, value='{}'.format('MODO DEMO'), readOnly=True),
                     html.H5('ID:'),
                     dcc.Input(className='input', id='id',type='text',placeholder='', value='{}'.format('MODO DEMO'), readOnly=True),
-                    html.H5('INICIO:'),
-                    dcc.Input(className='input', id='inicio2',type='text',placeholder='', value='{}'.format('MODO DEMO'), readOnly=True),
+                    html.H5('TURNO/INICIO:'),
+                    html.Div([
+                        dcc.Input(className='input', id='turno',type='text',placeholder='', value='{}'.format('TURNO DEMO'), readOnly=True),
+                        dcc.Input(className='input', id='inicio2',type='text',placeholder='', value='{}'.format('INICIO DEMO'), readOnly=True),
+                    ],style={'display': 'grid', 'grid-template-columns': '1fr 3fr', 'grid-gap': '10px'}),
                     html.H5('TIEMPO PRODUCCIÓN:'),
                     dcc.Input(className='input', id='t-produccion',type='text',placeholder='', value='{}'.format('MODO DEMO'), readOnly=True),
                     html.H5('TIEMPO DE PREPARACIÓN:'),
