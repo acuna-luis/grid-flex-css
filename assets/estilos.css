@@ -18,7 +18,7 @@ header {
 	font-weight: bold;
 	padding: 0px;
 	position: relative;
-	overflow: hidden;
+	/*overflow: hidden;*/
 	background-repeat: no-repeat;
 	background-position: left top;
 	display: grid;
@@ -31,6 +31,13 @@ h4{
 h5{
 	font-size: 19px;
 	margin-right: 5px;
+}
+.menu{
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	color: #2d5f7c;
+	background-color: #acc6d5;
 }
 .titulo {
 	font-size: 24px;
@@ -59,7 +66,7 @@ h5{
 }
 .container .top .left{
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: 2fr 3fr;
 	gap: 0px;
 }
 .container .top .left .left{
@@ -84,7 +91,7 @@ h5{
 }
 .container .top .right .row1{
 	display: grid;
-	grid-template-columns: repeat(2, 1fr);
+	grid-template-columns: 1fr 2fr;
 }
 .container .top .right .row2{
 	display: grid;
@@ -167,11 +174,12 @@ h5{
 
 .card {
 	border-radius: 10px;
+	border: 1px solid #ccc;
 	min-height: 100px;
 	font-weight: bold;
-	padding: 20px;
+	padding: 10px;
 	position: relative;
-	overflow: hidden;
+	/*overflow: hidden;*/
 	background-size: cover;
 	background-position: center center;
 	background-color: #f2f2f2;
@@ -204,10 +212,12 @@ h5{
 	background-color: #acc6d5;
 }
 .dropdown {
+	width: max-content;
 	position: relative;
 	display: inline-block;
 	color: #2d5f7c;
 	background-color: #acc6d5;
+	padding-right: .625rem;
   }
   
 .dropdown-content {
