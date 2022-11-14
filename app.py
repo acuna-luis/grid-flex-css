@@ -40,13 +40,13 @@ app.layout = html.Div([
         html.Div([
             html.Div([
                 html.Span('Herramientas'),
-                html.Div([html.P('Rechazo'), html.P('My Web')], className='dropdown-content'),
+                html.Div([html.P('Rechazo'), html.P('My Web')], className='dropdown-content', id='dropdown-content-herramientas'),
                 ], 
             className="dropdown"),
             html.Div(' '),
             html.Div([
                 html.Span(' Config'),
-                html.Div([html.P('conf1'), html.P('conf2')], className='dropdown-content'),
+                html.Div([html.P('conf1'), html.P('conf2')], className='dropdown-content', id='dropdown-content-config'),
                 ], 
             className="dropdown"),
         ], className='menu'),
@@ -110,7 +110,7 @@ app.layout = html.Div([
                     ], className='container top right row4'
                     ), 
                     html.Div([
-                        html.Button('Modificar', id='modificar', n_clicks=0, style={'background-color': '#2d5f7c', 'color': 'white', 'margin-right':20}),
+                        html.Button('Modificar', id='modificar', n_clicks=0, style={'background-color': '#2d5f7c', 'color': 'white'}),
                     ], className='container top right row5'
                     )],
                 className='container top right'), 
@@ -122,25 +122,25 @@ app.layout = html.Div([
             html.Div(
                 html.Div([
                         html.H4('OK:'),
-                        dcc.Input(className='input', id='ip-plc22',type='text',placeholder='',style={'padding-bottom': '10%', 'padding-top': '10%', 'background-color': 'green'}, value='{}'.format('MODO DEMO'), readOnly=True),
+                        dcc.Input(className='input', id='ok',type='text',placeholder='',style={'padding-bottom': '10%', 'padding-top': '10%', 'background-color': 'green'}, value='{}'.format('MODO DEMO'), readOnly=True),
                         html.H4('NOK:'),
-                        dcc.Input(className='input', id='turno22',type='text',placeholder='', value='{}'.format('MODO DEMO'), readOnly=True, style={ 'padding-bottom': '10%', 'padding-top': '10%', 'background-color': 'red'})], 
+                        dcc.Input(className='input', id='nok',type='text',placeholder='', value='{}'.format('MODO DEMO'), readOnly=True, style={ 'padding-bottom': '10%', 'padding-top': '10%', 'background-color': 'red'})], 
                 className='container middle left'),
             className="card"),
             html.Div(
                 html.Div([
                         html.H4('OEE_D:'),
-                        dcc.Input(className='input', id='ip-plc223',type='text',placeholder='',style={'padding-bottom': '5%', 'padding-top': '5%', 'background-color': 'green'}, value='{}'.format('MODO DEMO'), readOnly=True),
+                        dcc.Input(className='input', id='oee-d',type='text',placeholder='',style={'padding-bottom': '5%', 'padding-top': '5%', 'background-color': 'green'}, value='{}'.format('MODO DEMO'), readOnly=True),
                         html.H4('OEE_R:'),
-                        dcc.Input(className='input', id='turno232',type='text',placeholder='', value='{}'.format('MODO DEMO'), readOnly=True, style={ 'padding-bottom': '5%', 'padding-top': '5%', 'background-color': 'green'}),
+                        dcc.Input(className='input', id='oee-r',type='text',placeholder='', value='{}'.format('MODO DEMO'), readOnly=True, style={ 'padding-bottom': '5%', 'padding-top': '5%', 'background-color': 'green'}),
                         html.H4('OEE_C:'),
-                        dcc.Input(className='input', id='turno223',type='text',placeholder='', value='{}'.format('MODO DEMO'), readOnly=True, style={ 'padding-bottom': '5%', 'padding-top': '5%', 'background-color': 'red'})], 
+                        dcc.Input(className='input', id='oee-c',type='text',placeholder='', value='{}'.format('MODO DEMO'), readOnly=True, style={ 'padding-bottom': '5%', 'padding-top': '5%', 'background-color': 'red'})], 
                 className='container middle middle1'),
             className="card"),
             html.Div(
                 html.Div([
                         html.H4('OEE:', style={'margin-top': '20%', 'margin-right': '20%'}),
-                        dcc.Input(className='input', id='turno2243',type='text',placeholder='', value='{}'.format('MODO DEMO'), readOnly=True, style={ 'padding-bottom': '25%', 'padding-top': '25%', 'background-color': 'green'})], 
+                        dcc.Input(className='input', id='oee',type='text',placeholder='', value='{}'.format('MODO DEMO'), readOnly=True, style={ 'padding-bottom': '25%', 'padding-top': '25%', 'background-color': 'green'})], 
                 className='container middle right'),
             className="card")
         ], className="container middle"),
@@ -150,19 +150,19 @@ app.layout = html.Div([
             html.Div(
                 html.Div([
                     html.H5('NOMBRE:'),
-                    dcc.Input(className='input', id='ip-plc7',type='text',placeholder='',style={'display':'inline-block'}, value='{}'.format('MODO DEMO'), readOnly=True),
+                    dcc.Input(className='input', id='nombre',type='text',placeholder='',style={'display':'inline-block'}, value='{}'.format('MODO DEMO'), readOnly=True),
                     html.H5('ID:'),
-                    dcc.Input(className='input', id='turno7',type='text',placeholder='', value='{}'.format('MODO DEMO'), readOnly=True),
+                    dcc.Input(className='input', id='id',type='text',placeholder='', value='{}'.format('MODO DEMO'), readOnly=True),
                     html.H5('INICIO:'),
-                    dcc.Input(className='input', id='producto7',type='text',placeholder='', value='{}'.format('MODO DEMO'), readOnly=True),
+                    dcc.Input(className='input', id='inicio2',type='text',placeholder='', value='{}'.format('MODO DEMO'), readOnly=True),
                     html.H5('TIEMPO PRODUCCIÓN:'),
-                    dcc.Input(className='input', id='t-estandar7',type='text',placeholder='', value='{}'.format('MODO DEMO'), readOnly=True),
+                    dcc.Input(className='input', id='t-produccion',type='text',placeholder='', value='{}'.format('MODO DEMO'), readOnly=True),
                     html.H5('TIEMPO DE PREPARACIÓN:'),
-                    dcc.Input(className='input', id='takt-time7',type='text',placeholder='', value='{}'.format('MODO DEMO'), readOnly=True),
+                    dcc.Input(className='input', id='t-preparacion',type='text',placeholder='', value='{}'.format('MODO DEMO'), readOnly=True),
                     html.H5('TIEMPO DE MICRO-PARADAS:'),
-                    dcc.Input(className='input', id='t-estimado7',type='text',placeholder='', value='{}'.format('MODO DEMO'), readOnly=True),
+                    dcc.Input(className='input', id='t-microparadas',type='text',placeholder='', value='{}'.format('MODO DEMO'), readOnly=True),
                     html.H5('TIEMPO PARADAS:'),
-                    dcc.Input(className='input', id='cantidad7',type='text',placeholder='', value='{}'.format('MODO DEMO'), readOnly=True)],
+                    dcc.Input(className='input', id='t-paradas',type='text',placeholder='', value='{}'.format('MODO DEMO'), readOnly=True)],
                 className='container bottom left'),
             className="card"),
             html.Div(
