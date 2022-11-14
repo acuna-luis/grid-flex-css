@@ -90,8 +90,15 @@ app.layout = html.Div([
                         html.H4('T. ESTIMADO:'),
                         dcc.Input(className='input', id='t-estimado',type='text',placeholder='', value='{}'.format('MODO DEMO'), readOnly=True),
                         html.H4('CANTIDAD:'),
-                        dcc.Input(className='input', id='cantidad',type='text',placeholder='', value='{}'.format('MODO DEMO'), readOnly=True)],
-                    style={'margin-top': '10px'}, 
+                        dcc.Input(className='input', id='cantidad',type='text',placeholder='', value='{}'.format('MODO DEMO'), readOnly=True),
+                        html.H4('ORDEN:'),
+                        dcc.Input(className='input', id='orden',type='text',placeholder='', value='{}'.format(''), style={'background-color': 'white'}),
+                        html.P(''),
+                        html.Div([
+                            html.Button('INICIAR PRODUCCIÓN', id='iniciar-parar-produccion', n_clicks=0, style={'background-color': 'green', 'color': 'white', 'width': '150px', 'margin': '10px 0px 0px 0px'}),
+                        ], style={'align': 'right'}),
+                    ],    
+                    #style={'margin': '0px 0px 0px 0px'},
                     className='container top left right')
                 ],
                 className='container top left'), 

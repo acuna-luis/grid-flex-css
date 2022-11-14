@@ -81,10 +81,11 @@ h5{
 }
 .container .top .left .right{
 	background-image: none;
+	padding: 0px 50px 0px 0px;
 	min-width: 100px;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	grid-template-rows: repeat(6, 1fr);
+	grid-template-rows: repeat(6, 1fr) 2fr;
 	text-align: right;
 	gap: 0px;
 }
