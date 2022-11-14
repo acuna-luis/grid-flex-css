@@ -96,9 +96,8 @@ app.layout = html.Div([
                         html.P(''),
                         html.Div([
                             html.Button('INICIAR PRODUCCIÓN', id='iniciar-parar-produccion', n_clicks=0, style={'background-color': 'green', 'color': 'white', 'width': '150px', 'margin': '10px 0px 0px 0px'}),
-                        ], style={'align': 'right'}),
+                        ])
                     ],    
-                    #style={'margin': '0px 0px 0px 0px'},
                     className='container top left right')
                 ],
                 className='container top left'), 
@@ -132,7 +131,8 @@ app.layout = html.Div([
                     ], className='container top right row4'
                     ), 
                     html.Div([
-                        html.Button('MODIFICAR', id='modificar', n_clicks=0, style={'align': 'right', 'background-color': '#2d5f7c', 'color': 'white', 'width': '150px', 'padding': '1% 0px 1% 0px'}),
+                        html.P(''),
+                        html.Button('MODIFICAR', id='modificar', n_clicks=0, style={'background-color': '#2d5f7c', 'color': 'white', 'width': '100%', 'padding': '1% 0px 1% 0px'}),
                     ], className='container top right row5'
                     )],
                 className='container top right'), 

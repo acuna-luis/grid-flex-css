@@ -86,7 +86,6 @@ h5{
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	grid-template-rows: repeat(6, 1fr) 2fr;
-	text-align: right;
 	gap: 0px;
 }
 .container .top .right{
@@ -113,8 +112,8 @@ h5{
 }
 .container .top .right .row5{
 	display: grid;
-	grid-template-columns: 1fr;
-	margin-left: 80%;
+	grid-template-columns: 4fr 1fr;
+	/*margin-left: 80%;*/
 	margin-top: 2%;
 }
 
@@ -187,7 +186,6 @@ h5{
 	font-weight: bold;
 	padding: 10px;
 	position: relative;
-	/*overflow: hidden;*/
 	background-size: cover;
 	background-position: center center;
 	background-color: #f2f2f2;
