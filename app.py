@@ -50,7 +50,7 @@ app.layout = html.Div([
             className="dropdown"),
             html.Div([
                 html.Span('Ayuda'),
-                html.Div([html.P('ayuda1'), html.P('ayuda2')], className='dropdown-content', id='dropdown-content-config'),
+                html.Div([html.P('ayuda1'), html.P('ayuda2')], className='dropdown-content', id='dropdown-content-ayuda'),
                 ], 
             className="dropdown"),
         ], className='menu'),
@@ -93,7 +93,7 @@ app.layout = html.Div([
                 html.Div([
                     html.Div([
                         html.H4('ESTADO PRODUCCIÓN:',style={'padding':'5%'}),
-                        dcc.Input(id='estado',type='text',placeholder='',style={'background-color': 'orange','textAlign': 'center', 'padding':'5%'}, value='{}'.format('EN PREPARACIÓN'), readOnly=True),
+                        dcc.Input(id='estado',type='text',placeholder='',style={'background-color': 'orange','textAlign': 'center', 'padding':'5%', 'border-radius': '10px'}, value='{}'.format('EN PREPARACIÓN'), readOnly=True),
                     ], className='container top right row1'
                     ),    
                     html.Div([
