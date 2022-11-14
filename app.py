@@ -68,6 +68,7 @@ app.layout = html.Div([
                     'text-align': 'right',
                     'display': 'grid',
                     'grid-template-columns': '1fr 1fr',
+                    'padding': '2.5% 0px 0px 0px',
             })
         ], className='hbottom', ),
     ]),
