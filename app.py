@@ -43,10 +43,14 @@ app.layout = html.Div([
                 html.Div([html.P('Rechazo'), html.P('My Web')], className='dropdown-content', id='dropdown-content-herramientas'),
                 ], 
             className="dropdown"),
-            html.Div(' '),
             html.Div([
-                html.Span(' Config'),
+                html.Span('Config'),
                 html.Div([html.P('conf1'), html.P('conf2')], className='dropdown-content', id='dropdown-content-config'),
+                ], 
+            className="dropdown"),
+            html.Div([
+                html.Span('Ayuda'),
+                html.Div([html.P('ayuda1'), html.P('ayuda2')], className='dropdown-content', id='dropdown-content-config'),
                 ], 
             className="dropdown"),
         ], className='menu'),
